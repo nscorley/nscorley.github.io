@@ -1,0 +1,41 @@
+/** Base SCSS styles for personal website **/
+.header-image {
+  margin-top: 6em;
+}
+.coder-icon {
+  font-size: 6em !important;
+}
+.strava-icon img, .amherst-icon img {
+  height: 12em !important;
+  display: inline;
+  margin: auto;
+}
+.work-header-container {
+  margin-top: 6em;
+  margin-bottom: 2em;
+}
+.modsy-icon img {
+  height: 8em !important;
+  margin-bottom: 1em;
+}
+.camp-celiac-icon img {
+  height: 8em !important;
+  padding-bottom: 5px;
+  margin-bottom: 1em;
+}
+.chess-icon img {
+  height: 8em !important;
+  margin-bottom: 1em;
+}
+.optiver-icon {
+  height: 8em;
+  margin-bottom: 1em;
+  text-align: center;
+  img {
+    height: 4em !important;
+    margin-top: 3em;
+  }
+}
+.menu {
+  margin-right: 1em !important;
+}
