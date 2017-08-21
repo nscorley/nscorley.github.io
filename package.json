@@ -4,7 +4,7 @@
   "description": "Nate Corley's personal website.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors",
+    "start": "webpack-dev-server --progress --colors"
   },
   "author": "Nate Corley",
   "license": "MIT",
