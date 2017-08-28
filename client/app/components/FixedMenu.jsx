@@ -5,7 +5,7 @@ import {
 } from 'semantic-ui-react';
 
 const FixedMenu = ({ selected, handleMenuClick }) => (
-  <Menu fixed="top" size="large" stackable>
+  <Menu fixed="top" size="large" stackable className="computer-only">
     <Menu.Menu position="right">
       <Menu.Item
         as="a"

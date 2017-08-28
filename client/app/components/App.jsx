@@ -28,7 +28,7 @@ import SF_SKYLINE from '../assets/images/sf-skyline.jpg';
 
 
 // Offset all anchors by -60 to account for a fixed header
-// and scroll more quickly than the default 400ms
+// and scroll more slowly than the default 400ms
 configureAnchors({ offset: -100, scrollDuration: 600 });
 // email URL
 const EMAIL_NATE = 'mailto:nscorley@gmail.com?Subject=Hello%20Nate!';
@@ -163,7 +163,7 @@ export default class App extends React.Component {
                   <Header as="h3" style={{ fontSize: '2em' }}>I go to school.</Header>
                   <p style={{ fontSize: '1.33em' }}>
                  Yup, I&#39;m still slaving away, learning abstract concepts that likely will
-                 bare no influence on my life after graduation.
+                 bear no influence on my life after graduation.
                   </p>
                 </Grid.Column>
                 <Grid.Column textAlign="center">
