@@ -222,13 +222,13 @@ export default class App extends React.Component {
                     as="a"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.celiaccamp.com"
+                    href="http://www.celiaccamp.com"
                     className="camp-celiac-icon"
                     src={CAMP_CELIAC_SRC}
                   />
                   <p style={{ fontSize: '1.33em' }}>
-                 Since 2011, I have been the active webmaster for Camp Celiac,
-                 a non-profit, entirely volunteer camp serving children with life-long disabilities.
+                     Since 2011, I have been the active webmaster for Camp Celiac,
+                     a non-profit, entirely volunteer camp serving children with life-long disabilities.
                   </p>
                 </Grid.Column>
               </Grid.Row>
