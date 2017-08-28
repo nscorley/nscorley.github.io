@@ -79,7 +79,7 @@ export default class App extends React.Component {
               </Grid.Row>
               <Grid.Row>
                 <Container text textAlign="center">
-                  <Image inline shape="circular" size="small" src={HEADSHOT_SRC} className="header-image" />
+                  <Image inline shape="circular" size="medium" src={HEADSHOT_SRC} className="header-image" />
                   <Header
                     as="h1"
                     content="Hi, I'm Nate."

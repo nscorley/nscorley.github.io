@@ -8,7 +8,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body',
 });
 
-const BUILD_DIR = path.resolve(__dirname, 'client/public');
+const BUILD_DIR = path.resolve(__dirname, '');
 const APP_DIR = path.resolve(__dirname, 'client/app');
 
 const config = {
