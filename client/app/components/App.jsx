@@ -296,14 +296,14 @@ export default class App extends React.Component {
                     as="a"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/nscorley/morty-chess"
+                    href="http://mortychess.com"
                     className="chess-icon"
                     src={CHESS_SRC}
                   />
                   <p style={{ fontSize: '1.33em' }}>
                     I led a team to create&nbsp;
                     <a
-                      href="https://github.com/nscorley/morty-chess"
+                      href="http://mortychess.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
