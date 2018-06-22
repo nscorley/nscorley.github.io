@@ -5,6 +5,20 @@
   }
 }
 
+.force-right {
+  div {
+    justify-content: flex-end;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .about {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
+
 .header-image {
   margin-top: 3em;
 }
@@ -17,6 +31,11 @@
   height: 12em !important;
   display: inline;
   margin: auto;
+}
+
+.ui.cards > .card {
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .work-header-container {
@@ -52,4 +71,38 @@
 
 .menu {
   margin-right: 1em !important;
+}
+
+.center-img {
+  margin: 0 auto;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: black;
+  font-size: 40px;
+}
+
+.slick-next {
+  margin-right: 40px;
+  padding-bottom: 55px;
+  z-index: 99;
+  @media only screen and (max-width: 670px) {
+      display: none !important;
+  }
+}
+.slick-prev {
+  margin-left: 20px;
+  padding-bottom: 55px;
+  z-index: 99;
+  @media only screen and (max-width: 670px) {
+      display: none !important;
+  }
+}
+.slick-dots {
+  bottom: -15px !important
+}
+.content p {
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.15em;
 }

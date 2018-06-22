@@ -4,7 +4,7 @@ import {
   Menu,
 } from 'semantic-ui-react';
 
-const HeaderMenu = ({ selected, handleMenuClick }) => (
+const HeaderMenu = ({ handleMenuClick }) => (
   <Menu
     inverted
     pointing
@@ -17,34 +17,31 @@ const HeaderMenu = ({ selected, handleMenuClick }) => (
         as="a"
         name="hello"
         href="#hello"
-        active={selected === 'hello'}
+        active
         onClick={handleMenuClick}
       >
           Hello
       </Menu.Item>
       <Menu.Item
         as="a"
-        name="about"
-        href="#about"
-        active={selected === 'about'}
-        onClick={handleMenuClick}
-      >
-          About
-      </Menu.Item>
-      <Menu.Item
-        as="a"
         name="work"
         href="#work"
-        active={selected === 'work'}
         onClick={handleMenuClick}
       >
           Work
       </Menu.Item>
       <Menu.Item
         as="a"
+        name="about"
+        href="#about"
+        onClick={handleMenuClick}
+      >
+          About
+      </Menu.Item>
+      <Menu.Item
+        as="a"
         name="contact"
         href="#contact"
-        active={selected === 'contact'}
         onClick={handleMenuClick}
       >
           Contact

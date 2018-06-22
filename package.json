@@ -16,6 +16,7 @@
     "react-dom": "^15.6.1",
     "react-scroll": "^1.5.4",
     "react-scrollable-anchor": "^0.4.2",
+    "react-slick": "^0.23.1",
     "semantic-ui-react": "^0.71.3",
     "webpack": "^3.4.1"
   },
