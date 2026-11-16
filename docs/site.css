@@ -4,3 +4,5 @@
 @media(max-width:450px){.research-row{grid-template-columns:1fr}.research-row:not(.rfd4-row) .research-image{max-width:260px;justify-self:center;grid-row:2}.refinement-grid{grid-template-columns:1fr}.photo-grid img{height:140px}}
 
 .paper-links{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px}.repo-badge{display:inline-flex;align-items:center;min-height:24px}.repo-badge img{height:20px;width:auto;max-width:100%}
+
+.profile-links{gap:12px;align-items:center}.profile-links>a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;opacity:.78}.profile-links>a:hover{opacity:1}.profile-links img{width:22px;height:22px}.profile-links>a:nth-child(2) img{width:25px;height:25px}

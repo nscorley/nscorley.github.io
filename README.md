@@ -39,3 +39,7 @@ The public site uses the `dev` branch and `/docs` directory, with the custom dom
 Source URLs, Git blob IDs, asset hashes, and RF3 alignment details are in `docs/assets/structures/provenance.json`. Original figure assets remain available as image fallbacks. Dragging pauses rotation; double-clicking toggles rotation. Keyboard arrows rotate, +/− zoom, 0 resets, and space toggles rotation. Reduced-motion preferences disable initial rotation. Off-screen viewers stop spinning.
 
 Repository star badges are loaded live from Shields.io. RF3 and RFD3 link to their model directories and display the star count of the shared Foundry repository, labeled Foundry. AtomWorks and RFD4-Proteina use their own repository counts. The adoption statement is supplied by Nate.
+
+## Search and social metadata
+
+The homepage includes a canonical HTTPS URL, descriptive title, Open Graph and Twitter metadata, and JSON-LD for the website and profile. `docs/sitemap.xml` lists the canonical homepage; `docs/robots.txt` advertises it. Social profile links use verified public handles and accessible logo links. Social SVGs are from Bootstrap Icons (MIT) and Simple Icons (CC0); license files are in `docs/assets/icons/`.
