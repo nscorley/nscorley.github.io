@@ -1,6 +1,20 @@
 // Coordinates and alignment provenance: assets/structures/provenance.json.
 // Rendering follows the RFD4-Proteina site's 3Dmol.js structure presets.
 const motion = matchMedia('(prefers-reduced-motion: reduce)');
+let rendererPromise;
+function loadRenderer() {
+  if (window.$3Dmol) return Promise.resolve();
+  if (!rendererPromise) rendererPromise = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'vendor/3Dmol-min.js';
+    script.async = true;
+    script.onload = () => window.$3Dmol ? resolve() : reject(new Error('3D renderer unavailable'));
+    script.onerror = () => reject(new Error('3D renderer could not load'));
+    document.head.append(script);
+  });
+  return rendererPromise;
+}
+
 async function loadStructure(file) {
   const response = await fetch(`assets/structures/${file}`);
   if (!response.ok) throw new Error(`Structure unavailable: ${file}`);
@@ -15,8 +29,8 @@ async function startStructure(canvas) {
     if (!event.ctrlKey && !event.metaKey) event.stopImmediatePropagation();
   }, {capture: true, passive: true});
   try {
-    if (!window.$3Dmol) throw new Error('3D renderer unavailable');
-    const [main, overlay] = await Promise.all([
+    const [, main, overlay] = await Promise.all([
+      loadRenderer(),
       loadStructure(canvas.dataset.file),
       canvas.dataset.overlay ? loadStructure(canvas.dataset.overlay) : null,
     ]);
@@ -72,4 +86,13 @@ async function startStructure(canvas) {
     console.warn('Protein viewer:', error.message);
   }
 }
-document.querySelectorAll('.molecule-viewer').forEach(startStructure);
+// Initialize models only as their figures approach the viewport. Text and posters
+// remain usable without JavaScript or while the renderer is loading.
+const structureObserver = new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    structureObserver.unobserve(entry.target);
+    startStructure(entry.target);
+  }
+}, {rootMargin: '150px 0px'});
+document.querySelectorAll('.molecule-viewer').forEach(canvas => structureObserver.observe(canvas));

@@ -16,6 +16,7 @@
   <meta property="og:image:height" content="250">
   <meta property="og:image:alt" content="Nathaniel ‘Nate’ Corley">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@nscorley">
   <meta name="twitter:title" content="Nate Corley | Protein Design &amp; Machine Learning">
   <meta name="twitter:description" content="Nathaniel “Nate” Corley is a PhD student in the Baker Lab at the University of Washington, working on generative models for protein structure prediction and design.">
   <meta name="twitter:image" content="https://natecorley.com/assets/nate-corley.webp">
@@ -93,7 +94,6 @@
   </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="site.css">
-  <script src="vendor/3Dmol-min.js" defer></script>
   <script src="site.js" defer></script>
   <script src="protein-viewer.js" defer></script>
 </head>
@@ -113,7 +113,7 @@
 
   <section id="research" aria-labelledby="research-title">
     <h2 id="research-title">Research</h2>
-    <article class="research-row rfd4-row">
+    <article class="research-row rfd4-row" id="rfd4" aria-labelledby="rfd4-title">
       <figure class="protein-figure">
         <div class="protein-stage">
           <img id="protein-poster" src="assets/rfd4-pte.webp" alt="Designed phosphotriesterase protein with its substrate and two zinc ions" width="544" height="518">
@@ -121,27 +121,27 @@
         </div>
       </figure>
       <div>
-        <h3><a href="https://doi.org/10.64898/2026.11.12.766037">Biomolecular design through latent reasoning with RFD4-Proteina</a></h3>
+        <h3 id="rfd4-title"><a href="https://doi.org/10.64898/2026.11.12.766037">Biomolecular design through latent reasoning with RFD4-Proteina</a></h3>
         <p class="citation"><strong>Nathaniel Corley</strong>, Kieran Didi, Maxwell W. Kazman, Rafael I. Brent, et al.<br><em>bioRxiv</em>, 2026</p>
         <p>I led development of RFD4-Proteina, a generative model for joint sequence and structure design in a chemical and conformational latent space. RFD4 delivered a step change in design quality and computational efficiency, setting a new Pareto frontier across protein binding, small-molecule binding, enzyme scaffolding, and DNA binding benchmarks.</p>
         <p>We experimentally validated RFD4-Proteina across selective molecular binding and catalysis, including enzymes for both bond cleavage and bond formation and a proof of concept for pharmaceutical synthesis.</p>
         <div class="paper-links"><a href="https://doi.org/10.64898/2026.11.12.766037">Paper</a><a href="https://rfd4-proteina.org/">Project</a><a class="repo-badge" href="https://github.com/RosettaCommons/RFD4-Proteina" aria-label="RFD4-Proteina on GitHub" title="RFD4-Proteina on GitHub."><img src="https://img.shields.io/github/stars/RosettaCommons/RFD4-Proteina?style=social&amp;label=RFD4-Proteina%20%E2%98%85&amp;logo=github" alt="RFD4-Proteina GitHub stars" height="20"></a></div>
       </div>
     </article>
-    <article class="research-row">
+    <article class="research-row" id="rf3" aria-labelledby="rf3-title">
       <figure class="protein-figure"><div class="protein-stage"><img src="assets/atomworks.png" alt="AtomWorks molecular data pipeline" width="1714" height="914" loading="lazy"><div class="molecule-viewer" data-file="rf3-5vht-prediction.cif" data-overlay="rf3-5vht-reference-aligned.cif" data-style="rf3" role="img" aria-label="RF3 prediction of 5VHT in blue, overlaid with the experimental reference in gray. Drag or use arrow keys to rotate; space pauses, plus and minus zoom, zero resets." title="RF3 prediction (blue) / experimental structure (gray)" tabindex="0"></div></div></figure>
       <div>
-        <h3><a href="https://doi.org/10.1101/2025.08.14.670328">Accelerating Biomolecular Modeling with AtomWorks and RF3</a></h3>
+        <h3 id="rf3-title"><a href="https://doi.org/10.1101/2025.08.14.670328">Accelerating Biomolecular Modeling with AtomWorks and RF3</a></h3>
         <p class="citation"><strong>Nathaniel Corley</strong>, Simon Mathis, Rohith Krishna, et al.<br><em>bioRxiv</em>, 2025</p>
         <p>I led development of AtomWorks and the structure prediction model RosettaFold3 (RF3), which achieved state-of-the-art open-source performance on protein–protein, protein–ligand, and mixed-chirality peptide structure prediction at release.</p>
         <p>AtomWorks has been adopted by hundreds of researchers and dozens of labs and companies around the world.</p>
         <div class="paper-links"><a href="https://doi.org/10.1101/2025.08.14.670328">Paper</a><a href="https://rosettacommons.github.io/atomworks/latest/">Docs</a><a class="repo-badge" href="https://github.com/RosettaCommons/atomworks" aria-label="AtomWorks on GitHub" title="AtomWorks on GitHub."><img src="https://img.shields.io/github/stars/RosettaCommons/atomworks?style=social&amp;label=AtomWorks%20%E2%98%85&amp;logo=github" alt="AtomWorks GitHub stars" height="20"></a><a class="repo-badge" href="https://github.com/RosettaCommons/foundry/tree/production/models/rf3" aria-label="Foundry on GitHub" title="Foundry on GitHub. Stars are for the shared Foundry repository, which includes RF3 and RFD3."><img src="https://img.shields.io/github/stars/RosettaCommons/foundry?style=social&amp;label=Foundry%20%E2%98%85&amp;logo=github" alt="Foundry GitHub stars" height="20"></a></div>
       </div>
     </article>
-    <article class="research-row">
+    <article class="research-row" id="rfd3" aria-labelledby="rfd3-title">
       <figure class="protein-figure"><div class="protein-stage"><img src="assets/rfd3-overview.png" alt="RFD3 molecular design overview" width="1600" height="900" loading="lazy"><div class="molecule-viewer" data-file="rfd3-metalloprotease.cif" data-style="rfd3" role="img" aria-label="RFD3 metalloprotease design in purple, with the transition-state analog in orange and zinc in gray. Drag or use arrow keys to rotate; space pauses, plus and minus zoom, zero resets." title="RFD3 metalloprotease design" tabindex="0"></div></div></figure>
       <div>
-        <h3><a href="https://doi.org/10.1126/science.aeh2982">Atomic functional site scaffolding in biopolymers with RFdiffusion3</a></h3>
+        <h3 id="rfd3-title"><a href="https://doi.org/10.1126/science.aeh2982">Atomic functional site scaffolding in biopolymers with RFdiffusion3</a></h3>
         <p class="citation">Jasper Butcher, Rohith Krishna, Raktim Mitra, Seth M. Woodbury, Donghyo Kim, Rafael I. Brent, Yanjing Li, <strong>Nathaniel Corley</strong>, et al.<br><em>Science</em>, 2026 · Co-first author</p>
         <p>I co-developed RFD3, an all-atom diffusion model for designing proteins conditioned on interactions with proteins, nucleic acids, and small molecules.</p>
         <div class="paper-links"><a href="https://doi.org/10.1126/science.aeh2982">Paper</a><a class="repo-badge" href="https://github.com/RosettaCommons/foundry/tree/production/models/rfd3" aria-label="Foundry on GitHub" title="Foundry on GitHub. Stars are for the shared Foundry repository, which includes RF3 and RFD3."><img src="https://img.shields.io/github/stars/RosettaCommons/foundry?style=social&amp;label=Foundry%20%E2%98%85&amp;logo=github" alt="Foundry GitHub stars" height="20"></a></div>

@@ -43,3 +43,5 @@ Repository star badges are loaded live from Shields.io. RF3 and RFD3 link to the
 ## Search and social metadata
 
 The homepage includes a canonical HTTPS URL, descriptive title, Open Graph and Twitter metadata, and JSON-LD for the website and profile. `docs/sitemap.xml` lists the canonical homepage; `docs/robots.txt` advertises it. Social profile links use verified public handles and accessible logo links. Social SVGs are from Bootstrap Icons (MIT) and Simple Icons (CC0); license files are in `docs/assets/icons/`.
+
+The 3Dmol library and individual models load only as their figures approach the viewport. Research entries have stable `#rfd4`, `#rf3`, and `#rfd3` anchors. A custom `404.html` helps visitors recover from obsolete links and is excluded from indexing.
