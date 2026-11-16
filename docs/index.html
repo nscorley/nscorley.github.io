@@ -1,38 +1,83 @@
-<!--
-  ./client/index.html
-  basic html skeleton
--->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Nate Corley | Developer</title>
-    <!--  link to latest jQuery and Semantic UI minimized styling files -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css">
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"
-    ></script>
-
-    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-105429468-2', 'auto');
-      ga('send', 'pageview');
-    </script>
-  <link href="style.css" rel="stylesheet"></head>
-  <body>
-    <div id="root">
-      <!--  remaining HTML generated through react -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nate Corley, PhD student in the Baker Lab at the University of Washington. Generative modeling for protein structure prediction and design.">
+  <title>Nate Corley</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="site.css">
+  <script src="vendor/3Dmol-min.js" defer></script>
+  <script src="site.js" defer></script>
+  <script src="protein-viewer.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main" class="page">
+  <header class="bio" id="about">
+    <div>
+      <h1>Nate Corley</h1>
+      <p>I’m a PhD student in <a href="https://www.bakerlab.org/">David Baker’s lab</a> at the University of Washington’s <a href="https://www.ipd.uw.edu/">Institute for Protein Design</a>.</p>
+      <p>I work on generative modeling for protein structure prediction and design. I’m interested in how we can model molecular structure and interactions to design proteins with new functions.</p>
+      <p>Previously, I worked at McKinsey &amp; Company and Microsoft.</p>
+      <nav class="profile-links" aria-label="Profile links"><a href="https://github.com/nscorley">GitHub</a><span aria-hidden="true">/</span><a href="https://scholar.google.com/citations?user=ANL13r0AAAAJ&amp;hl=en">Google Scholar</a></nav>
     </div>
-  <script type="text/javascript" src="bundle.js"></script></body>
+    <img class="portrait" src="assets/nate-corley.webp" alt="Nate Corley" width="160" height="160">
+  </header>
+
+  <section id="research" aria-labelledby="research-title">
+    <h2 id="research-title">Research</h2>
+    <article class="research-row rfd4-row">
+      <figure class="protein-figure">
+        <div class="protein-stage">
+          <img id="protein-poster" src="assets/rfd4-pte.webp" alt="Designed phosphotriesterase protein with its substrate and two zinc ions" width="544" height="518">
+          <div id="protein-viewer" class="molecule-viewer" data-file="pte_p2h11.pdb" data-style="pte" role="img" aria-label="Interactive RFD4 phosphotriesterase design. Drag or use arrow keys to rotate; space pauses rotation, plus and minus zoom, zero resets." tabindex="0"></div>
+        </div>
+      </figure>
+      <div>
+        <h3><a href="https://doi.org/10.64898/2026.11.12.766037">Biomolecular design through latent reasoning with RFD4-Proteina</a></h3>
+        <p class="citation"><strong>Nathaniel Corley</strong>, Kieran Didi, Maxwell W. Kazman, Rafael I. Brent, et al.<br><em>bioRxiv</em>, 2026</p>
+        <p>I led development of RFD4-Proteina, a generative model for joint sequence and structure design in a chemical and conformational latent space. RFD4 delivered a step change in design quality and computational efficiency, setting a new Pareto frontier across protein binding, small-molecule binding, enzyme scaffolding, and DNA binding benchmarks.</p>
+        <p>We experimentally validated RFD4-Proteina across selective molecular binding and catalysis, including enzymes for both bond cleavage and bond formation and a proof of concept for pharmaceutical synthesis.</p>
+        <div class="paper-links"><a href="https://doi.org/10.64898/2026.11.12.766037">Paper</a><a href="https://rfd4-proteina.org/">Project</a><a class="repo-badge" href="https://github.com/RosettaCommons/RFD4-Proteina" aria-label="RFD4-Proteina on GitHub" title="RFD4-Proteina on GitHub."><img src="https://img.shields.io/github/stars/RosettaCommons/RFD4-Proteina?style=social&amp;label=RFD4-Proteina%20%E2%98%85&amp;logo=github" alt="RFD4-Proteina GitHub stars" height="20"></a></div>
+      </div>
+    </article>
+    <article class="research-row">
+      <figure class="protein-figure"><div class="protein-stage"><img src="assets/atomworks.png" alt="AtomWorks molecular data pipeline" width="1714" height="914" loading="lazy"><div class="molecule-viewer" data-file="rf3-5vht-prediction.cif" data-overlay="rf3-5vht-reference-aligned.cif" data-style="rf3" role="img" aria-label="RF3 prediction of 5VHT in blue, overlaid with the experimental reference in gray. Drag or use arrow keys to rotate; space pauses, plus and minus zoom, zero resets." title="RF3 prediction (blue) / experimental structure (gray)" tabindex="0"></div></div></figure>
+      <div>
+        <h3><a href="https://doi.org/10.1101/2025.08.14.670328">Accelerating Biomolecular Modeling with AtomWorks and RF3</a></h3>
+        <p class="citation"><strong>Nathaniel Corley</strong>, Simon Mathis, Rohith Krishna, et al.<br><em>bioRxiv</em>, 2025</p>
+        <p>I led development of AtomWorks and the structure prediction model RosettaFold3 (RF3), which achieved state-of-the-art open-source performance on protein–protein, protein–ligand, and mixed-chirality peptide structure prediction at release.</p>
+        <p>AtomWorks has been adopted by hundreds of researchers and dozens of labs and companies around the world.</p>
+        <div class="paper-links"><a href="https://doi.org/10.1101/2025.08.14.670328">Paper</a><a href="https://rosettacommons.github.io/atomworks/latest/">Docs</a><a class="repo-badge" href="https://github.com/RosettaCommons/atomworks" aria-label="AtomWorks on GitHub" title="AtomWorks on GitHub."><img src="https://img.shields.io/github/stars/RosettaCommons/atomworks?style=social&amp;label=AtomWorks%20%E2%98%85&amp;logo=github" alt="AtomWorks GitHub stars" height="20"></a><a class="repo-badge" href="https://github.com/RosettaCommons/foundry/tree/production/models/rf3" aria-label="Foundry on GitHub" title="Foundry on GitHub. Stars are for the shared Foundry repository, which includes RF3 and RFD3."><img src="https://img.shields.io/github/stars/RosettaCommons/foundry?style=social&amp;label=Foundry%20%E2%98%85&amp;logo=github" alt="Foundry GitHub stars" height="20"></a></div>
+      </div>
+    </article>
+    <article class="research-row">
+      <figure class="protein-figure"><div class="protein-stage"><img src="assets/rfd3-overview.png" alt="RFD3 molecular design overview" width="1600" height="900" loading="lazy"><div class="molecule-viewer" data-file="rfd3-metalloprotease.cif" data-style="rfd3" role="img" aria-label="RFD3 metalloprotease design in purple, with the transition-state analog in orange and zinc in gray. Drag or use arrow keys to rotate; space pauses, plus and minus zoom, zero resets." title="RFD3 metalloprotease design" tabindex="0"></div></div></figure>
+      <div>
+        <h3><a href="https://doi.org/10.1126/science.aeh2982">Atomic functional site scaffolding in biopolymers with RFdiffusion3</a></h3>
+        <p class="citation">Jasper Butcher, Rohith Krishna, Raktim Mitra, Seth M. Woodbury, Donghyo Kim, Rafael I. Brent, Yanjing Li, <strong>Nathaniel Corley</strong>, et al.<br><em>Science</em>, 2026 · Co-first author</p>
+        <p>I co-developed RFD3, an all-atom diffusion model for designing proteins conditioned on interactions with proteins, nucleic acids, and small molecules.</p>
+        <div class="paper-links"><a href="https://doi.org/10.1126/science.aeh2982">Paper</a><a class="repo-badge" href="https://github.com/RosettaCommons/foundry/tree/production/models/rfd3" aria-label="Foundry on GitHub" title="Foundry on GitHub. Stars are for the shared Foundry repository, which includes RF3 and RFD3."><img src="https://img.shields.io/github/stars/RosettaCommons/foundry?style=social&amp;label=Foundry%20%E2%98%85&amp;logo=github" alt="Foundry GitHub stars" height="20"></a></div>
+      </div>
+    </article>
+    <p class="publication-link">Full publication list on <a href="https://scholar.google.com/citations?user=ANL13r0AAAAJ&amp;hl=en">Google Scholar</a>.</p>
+  </section>
+
+  <section id="outside" aria-labelledby="outside-title">
+    <h2 id="outside-title">Outside research</h2>
+    <p>I spend much of my free time exploring the mountains of North America by skis, bike, and foot.</p>
+    <div class="photo-grid" aria-label="Skiing and backpacking photos"><a href="assets/outside/skiing-01.jpg" data-gallery><img src="assets/outside/skiing-01.jpg" alt="Two skiers on a snowy summit" width="1800" height="1350" loading="lazy"></a>
+      <a href="assets/outside/skiing-02.jpg" data-gallery><img src="assets/outside/skiing-02.jpg" alt="Skiers bootpacking through a steep snowy gully beside a rock wall" width="1350" height="1800" loading="lazy"></a>
+      <a href="assets/outside/skiing-03.jpg" data-gallery><img src="assets/outside/skiing-03.jpg" alt="A fresh skin track winding into snow-covered trees" width="1800" height="1350" loading="lazy"></a>
+      <a href="assets/outside/mountains-01.jpg" data-gallery><img src="assets/outside/mountains-01.jpg" alt="A lone backpacker crossing snow beneath glaciers and rugged alpine peaks" width="1800" height="1350" loading="lazy"></a>
+      <a href="assets/outside/mountains-02.jpg" data-gallery><img src="assets/outside/mountains-02.jpg" alt="A view over a turquoise alpine lake and snow-covered ridges from a rocky rest stop" width="1800" height="1350" loading="lazy"></a>
+      <a href="assets/outside/backpacking-01.jpg" data-gallery><img src="assets/outside/backpacking-01.jpg" alt="Boots stretched out during a backpacking break overlooking a glacier" width="1800" height="1350" loading="lazy"></a>
+    </div>
+
+  </section>
+  <footer>Nathaniel “Nate” Corley · University of Washington</footer>
+</main>
+<dialog id="photo-dialog" class="photo-dialog" aria-label="Mountain photo viewer"><button type="button" id="close-photo" aria-label="Close photo">Close ×</button><img id="dialog-photo" alt=""><p id="dialog-caption"></p></dialog>
+</body>
 </html>

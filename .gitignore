@@ -1,1 +1,4 @@
 node_modules/
+
+# Local media selections and originals (not website output).
+.local/

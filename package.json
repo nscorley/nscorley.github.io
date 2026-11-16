@@ -4,7 +4,9 @@
   "description": "Nate Corley's personal website.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors"
+    "start": "node scripts/serve.mjs",
+    "start:legacy": "webpack-dev-server --progress --colors",
+    "check": "node --check scripts/serve.mjs && node --check docs/site.js && node --check docs/protein-viewer.js"
   },
   "author": "Nate Corley",
   "license": "MIT",

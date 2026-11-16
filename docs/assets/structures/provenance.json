@@ -1,0 +1,26 @@
+{
+  "rf3": {
+    "prediction": "https://github.com/RosettaCommons/foundry/blob/production/models/rf3/tests/data/inference_regression_tests/5vht_from_file/5vht_from_file_model.cif",
+    "reference": "https://github.com/RosettaCommons/foundry/blob/production/models/rf3/tests/data/5vht_from_file.cif",
+    "alignment": "Rigid Kabsch fit of experimental reference onto prediction; matched chain and label residue IDs, verified residue names. No prediction coordinates changed.",
+    "matched_CA": 190,
+    "CA_RMSD_A": 1.1240751064652372,
+    "source_git_blobs": {
+      "prediction": "66b67692fd31a39f1e65063d587bf368f58f8ee6",
+      "reference": "d13b416d0eae646962eb6f4d71a89dd7d0112091"
+    }
+  },
+  "rfd3": {
+    "structure": "https://github.com/RosettaCommons/foundry/blob/production/models/rfd3/docs/tutorials/advanced_enzyme_tutorial_files/basic/metalloprotease_rfd3_input_test1_1_model_0.cif.gz",
+    "description": "Released metalloprotease design example from the advanced enzyme tutorial; no refolding or experimental validation implied.",
+    "source_git_blobs": {
+      "structure": "70b93eed4a7219c833c87753bb9f0e844663d113"
+    }
+  },
+  "asset_sha256": {
+    "pte_p2h11.pdb": "534e7c01d8a0c0fd79810aad7937fdad2d6984eec6ef92eab648678584baa122",
+    "rf3-5vht-prediction.cif": "d4713ef99955d97968402be7b6aa0b99a5f9c79bae14c45ffcb9ac9dd47a89ed",
+    "rf3-5vht-reference-aligned.cif": "2635cebe1aaa9445309e8dd0e9d8aa23dd3bace78a59c2b453636084aa1aef79",
+    "rfd3-metalloprotease.cif": "7fe854cfa0d081fdcc21f26095615b36e8802f693c4ccbfb928803bf1321d50c"
+  }
+}
